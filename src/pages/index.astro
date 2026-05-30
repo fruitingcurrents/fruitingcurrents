@@ -1,17 +1,177 @@
 ---
-
+// You can import fonts or global styles up here later if you expand!
 ---
-
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruiting Currents</title>
+    <!-- Importing an elegant display serif and clean body font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400&family=Playfair+Display:ital@1&family=Plus+Jakarta+Sans:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Subtle background gradient mist effect -->
+    <div class="bg-mist"></div>
+
+    <div class="container">
+        <header class="main-header">
+            <h1>Fruiting Currents</h1>
+        </header>
+
+        <!-- Abstract holographic gradient block -->
+        <div class="artwork-window">
+            <!-- You can leave this as a pure CSS gradient or overlay your own transparent PNG illustration later -->
+        </div>
+
+        <main class="links-wrapper">
+            
+            <section class="link-node">
+                <a href="https://yoursubstack.substack.com" class="main-link" target="_blank">The Substack Journal</a>
+                <p class="description">Essays on cyclical transitions, somatic ecology, and currents beneath the surface.</p>
+            </section>
+
+            <section class="link-node">
+                <a href="#booking-link" class="main-link">Natal Astrology Readings</a>
+                <p class="description">An archival look at your birth chart blueprint to map out personal structural timing.</p>
+            </section>
+
+            <section class="link-node">
+                <a href="#divination-link" class="main-link">Divination Sessions</a>
+                <p class="description">Symbolic imagery consulting for clarity on projects, internal blocks, and transformation cycles.</p>
+            </section>
+
+            <div class="divider"></div>
+
+            <section class="about-node">
+                <h2>About Me</h2>
+                <p class="about-text">A creative practitioner merging traditional symbolic modalities with clinical frameworks, holding space for structural alignment.</p>
+            </section>
+
+        </main>
+    </div>
+
+</body>
 </html>
+
+<style>
+    /* Styling System */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    body {
+        background-color: #f6f3f0; /* Soft warm linen background */
+        color: #2a2825;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        min-height: 100vh;
+        padding: 4rem 1.5rem;
+        position: relative;
+        overflow-x: hidden;
+    }
+
+    /* Ambient background aura */
+    .bg-mist {
+        position: absolute;
+        top: -10%;
+        right: -10%;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(circle at 80% 20%, rgba(243, 215, 215, 0.5) 0%, rgba(213, 226, 235, 0.4) 50%, rgba(246, 243, 240, 0) 100%);
+        z-index: 0;
+        pointer-events: none;
+    }
+
+    .container {
+        position: relative;
+        z-index: 1;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .main-header {
+        text-align: center;
+        margin-bottom: 2.5rem;
+    }
+
+    .main-header h1 {
+        font-family: 'Cinzel', serif;
+        font-weight: 400;
+        font-size: clamp(1.8rem, 5vw, 2.4rem);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #3a3530;
+    }
+
+    /* The visual center block */
+    .artwork-window {
+        width: 100%;
+        height: 240px;
+        /* Custom soft abstract gradient design */
+        background: linear-gradient(135deg, #e3dcd5 0%, #d4cbd6 40%, #cce0df 80%, #ebdcd5 100%);
+        border-radius: 2px;
+        margin-bottom: 3.5rem;
+        border: 1px solid rgba(0, 0, 0, 0.02);
+    }
+
+    .links-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+        text-align: center;
+    }
+
+    .link-node {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-link {
+        font-family: 'Playfair Display', serif;
+        font-style: italic;
+        font-size: 1.25rem;
+        color: #2a2825;
+        text-decoration: none;
+        border-bottom: 1px solid #2a2825;
+        padding-bottom: 2px;
+        margin-bottom: 0.5rem;
+        transition: opacity 0.3s ease;
+    }
+
+    .main-link:hover {
+        opacity: 0.5;
+    }
+
+    .description {
+        font-size: 0.85rem;
+        line-height: 1.5;
+        color: #6a635a;
+        font-weight: 300;
+        max-width: 380px;
+    }
+
+    .divider {
+        width: 40px;
+        height: 1px;
+        background-color: #e2ded9;
+        margin: 0.5rem auto;
+    }
+
+    .about-node h2 {
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: #4a453f;
+        margin-bottom: 0.6rem;
+    }
+
+    .about-text {
+        font-size: 0.85rem;
+        line-height: 1.6;
+        color: #5a534a;
+        font-weight: 300;
+    }
+</style>
