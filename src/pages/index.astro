@@ -1,60 +1,107 @@
 ---
 // Fruiting Currents — Refined Minimal Layout
 ---
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <title>Fruiting Currents</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400&family=Playfair+Display:ital@1&family=Plus+Jakarta+Sans:wght@300;400&display=swap" rel="stylesheet">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
+        />
+        <title>Fruiting Currents</title>
+        <link rel="icon" type="image/x-icon" href="/favicon_io/favicon.ico" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400&family=Instrument+Serif:ital,wght@0,400;1,400&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <div class="bg-mist"></div>
 
-    <div class="bg-mist"></div>
+        <div class="site-wrapper">
+            <header class="main-header">
+                <h1>Fruiting Currents</h1>
+            </header>
 
-    <div class="site-wrapper">
+            <img
+                src="/images/main_cover.jpg"
+                alt="Fruiting Currents Cover Illustration"
+                class="artwork-window"
+            />
 
-        <header class="main-header">
-            <h1>Fruiting Currents</h1>
-        </header>
+            <main class="content-flow">
+                <section class="node">
+                    <a
+                        href="https://fruitingcurrents.substack.com"
+                        class="main-link"
+                        target="_blank">My Substack</a
+                    >
+                    <p class="description">
+                        Mostly astrology related thoughts and experiments.
+                    </p>
+                </section>
 
-        <div class="artwork-window"></div>
+                <section class="node">
+                    <a href="/readings" class="main-link"
+                        >Vedic Astrology Natal Readings</a
+                    >
+                    <p class="description">
+                        60-90 minute natal chart reading based on a theme of
+                        your choice. By donation.
+                    </p>
+                </section>
 
-        <main class="content-flow">
+                <section class="node">
+                    <a href="/divination" class="main-link"
+                        >Request a Divination</a
+                    >
+                    <p class="description">
+                        Using techniques from Tājika Praśna, a branch of Vedic
+                        astrology, I look at a "natal" chart in the moment that
+                        a question is asked to find clarity and predict its
+                        outcome.
+                    </p>
+                </section>
 
-            <section class="node">
-                <a href="https://fruitingcurrents.substack.com" class="main-link" target="_blank">The Substack Journal</a>
-                <p class="description">Essays on cyclical transitions, somatic ecology, and currents beneath the surface.</p>
-            </section>
+                <div class="divider"></div>
 
-            <section class="node">
-                <a href="#booking" class="main-link">Natal Astrology Readings</a>
-                <p class="description">An archival look at your birth chart blueprint to map out personal structural timing.</p>
-            </section>
-
-            <section class="node">
-                <a href="/divination" class="main-link">Request a Divination</a>
-                <p class="description">Symbolic imagery consulting for clarity on projects, internal blocks, and transformation cycles.</p>
-            </section>
-
-            <div class="divider"></div>
-
-            <section class="about-node">
-                <h2>About Me</h2>
-                <p class="about-text">A creative practitioner merging traditional symbolic modalities with clinical frameworks, holding space for structural and cosmic alignment.</p>
-            </section>
-
-        </main>
-
-    </div>
-
-</body>
+                <section class="about-node">
+                    <div class="profile-container">
+                        <div class="profile-frame">
+                            <img
+                                src="/images/profile_pic.jpg"
+                                alt="Fiona Profile Portrait"
+                            />
+                        </div>
+                    </div>
+                    <h2>About Me</h2>
+                    <p class="about-text">
+                        I'm Fiona. I have been studying Vedic Astrology with
+                        Penny Farrow and the Cosmic Kaleidoscope team for the
+                        past 3+ years, and ayurveda at Yoga Veda Institute for
+                        2+ years. Prior to that, I was a data scientist at
+                        various tech companies in NYC. I hold a Doctorate in
+                        Economics from New York University.
+                    </p>
+                </section>
+            </main>
+        </div>
+    </body>
 </html>
 
 <style>
+    /* CONSOLIDATED FONT CONFIGURATION */
+    :root {
+        --font-primary:
+            "Geist Mono", monospace; /* Global body, descriptions, about text */
+        --font-secondary: "Instrument Serif", serif; /* Main navigation links */
+        --font-accent: "Instrument Serif", serif; /* Main site header title */
+    }
+
     /* Absolute Core Reset */
     * {
         box-sizing: border-box;
@@ -62,11 +109,11 @@
         padding: 0;
     }
 
-    html, body {
+    html,
+    body {
         background-color: #f6f3f0;
         color: #2a2825;
-        font-family: 'Plus Jakarta Sans', sans-serif;
-        /* Disables horizontal side-scrolling / shaking on mobile entirely */
+        font-family: var(--font-primary);
         overflow-x: hidden;
         width: 100%;
         -webkit-text-size-adjust: 100%;
@@ -83,7 +130,12 @@
         right: 0;
         width: 100%;
         height: 100%;
-        background: radial-gradient(circle at 80% 15%, rgba(243, 215, 215, 0.45) 0%, rgba(213, 226, 235, 0.4) 45%, rgba(246, 243, 240, 0) 100%);
+        background: radial-gradient(
+            circle at 20% 15%,
+            rgba(213, 226, 235, 0.4) 0%,
+            rgba(243, 215, 215, 0.35) 50%,
+            rgba(246, 243, 240, 0) 100%
+        );
         z-index: 0;
         pointer-events: none;
     }
@@ -92,9 +144,9 @@
     .site-wrapper {
         position: relative;
         z-index: 1;
-        max-width: 460px; /* Snug, editorial column width */
+        max-width: 460px;
         margin: 0 auto;
-        padding: 5rem 1.25rem 8rem 1.25rem; /* Generous 8rem bottom padding for space below About Me */
+        padding: 5rem 1.25rem 8rem 1.25rem;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -109,23 +161,24 @@
     }
 
     .main-header h1 {
-        font-family: 'Cinzel', serif;
+        font-family: var(--font-accent);
         font-weight: 400;
-        font-size: clamp(1.75rem, 6vw, 2.25rem);
-        letter-spacing: 0.08em;
+        font-size: clamp(2.25rem, 8vw, 3rem);
+        letter-spacing: 0.05em;
         text-transform: uppercase;
-        color: #3a3530;
+        color: #8a8278;
+        filter: blur(0.5px);
         line-height: 1.2;
     }
 
-    /* The visual center block */
+    /* Refined for handling image assets gracefully */
     .artwork-window {
         width: 100%;
         height: 250px;
-        background: linear-gradient(135deg, #e3dcd5 0%, #d4cbd6 40%, #cce0df 80%, #ebdcd5 100%);
+        object-fit: cover;
+        object-position: center;
         border-radius: 2px;
         margin-bottom: 4rem;
-        border: 1px solid rgba(0, 0, 0, 0.015);
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.01);
     }
 
@@ -134,7 +187,7 @@
         width: 100%;
         display: flex;
         flex-direction: column;
-        gap: 3rem; /* Perfectly equal rhythm between blocks */
+        gap: 3rem;
         text-align: center;
     }
 
@@ -146,26 +199,28 @@
     }
 
     .main-link {
-        font-family: 'Playfair Display', serif;
+        font-family: var(--font-secondary);
         font-style: italic;
-        font-size: 1.3rem;
+        font-size: 1.5rem;
         color: #2a2825;
         text-decoration: none;
-        border-bottom: 1px solid rgba(42, 40, 37, 0.8);
+        border-bottom: 1px dotted #8a8278;
         padding-bottom: 3px;
         margin-bottom: 0.65rem;
-        transition: opacity 0.3s ease, border-color 0.3s ease;
+        transition:
+            opacity 0.3s ease,
+            border-color 0.3s ease;
         display: inline-block;
     }
 
     .main-link:hover {
         opacity: 0.5;
-        border-bottom-color: rgba(42, 40, 37, 0.2);
+        border-bottom-color: rgba(138, 130, 120, 0.4);
     }
 
     .description {
-        font-size: 0.88rem;
-        line-height: 1.55;
+        font-size: 1rem;
+        line-height: 1.6;
         color: #6a635a;
         font-weight: 300;
         max-width: 360px;
@@ -186,24 +241,61 @@
         align-items: center;
     }
 
+    /* Outer wrapper to contain the blurred edges cleanly */
+    .profile-container {
+        position: relative;
+        width: 80px;
+        height: 80px;
+        margin-bottom: 1.25rem;
+    }
+
+    /* Strict auto-cropping & framing */
+    .profile-frame {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        border-radius: 50%;
+        background-color: #e2ded9;
+        /* Applies a subtle blur to the perimeter of the picture frame */
+        box-shadow:
+            0 0 4px 1px rgba(246, 243, 240, 1) inset,
+            0 0 6px 2px rgba(138, 130, 120, 0.15);
+        transform: translateZ(0); /* Forces safari/chrome container clipping */
+    }
+
+    .profile-frame img {
+        width: 100% !important;
+        height: 100% !important;
+        max-width: 100% !important;
+        max-height: 100% !important;
+        object-fit: cover !important;
+        object-position: center;
+        filter: blur(
+            0.3px
+        ); /* Gives the entire portrait a soft, dreamy tone matching the header */
+    }
+
+    /* Section Navigation Titles */
     .about-node h2 {
-        font-size: 0.75rem;
-        font-weight: 600;
-        letter-spacing: 0.18em;
-        text-transform: uppercase;
-        color: #4a453f;
+        font-family: var(--font-secondary);
+        font-style: italic;
+        font-size: 1.5rem;
+        color: #2a2825;
+        font-weight: 400;
         margin-bottom: 0.85rem;
+        text-transform: none;
+        letter-spacing: normal;
     }
 
     .about-text {
-        font-size: 0.88rem;
+        font-size: 0.82rem;
         line-height: 1.65;
         color: #5a534a;
         font-weight: 300;
         max-width: 380px;
     }
 
-    /* Mobile adjustments to handle scaling safely */
+    /* Mobile adjustments */
     @media (max-width: 400px) {
         .site-wrapper {
             padding-top: 3.5rem;

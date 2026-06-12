@@ -1,5 +1,5 @@
 ---
-// Fruiting Currents — Divination Request Layout
+// Fruiting Currents — Readings Booking Layout
 ---
 
 <!doctype html>
@@ -10,7 +10,7 @@
             name="viewport"
             content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
         />
-        <title>Fruiting Currents — Request a Divination</title>
+        <title>Fruiting Currents</title>
         <link rel="icon" type="image/x-icon" href="/favicon_io/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -24,38 +24,42 @@
 
         <div class="site-wrapper">
             <header class="main-header">
+                <!-- Linked title returning to index -->
                 <a href="/" class="header-link">
                     <h1>Fruiting Currents</h1>
                 </a>
             </header>
 
             <main class="content-flow">
+                <!-- Page Title -->
                 <section class="node">
-                    <h2 class="section-title">Request a Divination</h2>
+                    <h2 class="section-title">
+                        Vedic Astrology Natal Readings
+                    </h2>
                 </section>
 
+                <!-- Note from Fiona -->
                 <section class="node">
-                    <p class="description">
-                        Please submit a question that has a clear yes/no answer.
-                        Some examples include:
-                        <em
-                            >Will I get the promotion? Will the Knicks win the
-                            game? Is my cat at my brother's house?</em
-                        >
-                        I can also attempt to locate some missing items with questions
-                        such as
-                        <em>Where is my favourite baseball cap?</em>
+                    <p class="description note-highlight">
+                        Note from Fiona: Dear ones, I am navigating moving
+                        countries and am currently taking bookings for August
+                        and beyond. As my time zone shifts, I may ask to
+                        reschedule, please bear with me in finding the right
+                        time for us to meet.
                     </p>
                 </section>
 
+                <!-- Logistics Details -->
                 <section class="node">
                     <p class="description">
-                        It is important that you have at least some emotional
-                        investment in the question. Please provide as much
-                        context as you can so I can refine my answer for you.
-                        Typical response time would be 1-2 weeks.
+                        Readings will last between 60-90 minutes. Donations are
+                        appreciated, but not required. You will receive payment
+                        instructions after the reading. Please be as detailed as
+                        you can in specifying what questions you have coming
+                        into the reading.
                     </p>
                 </section>
+
                 <section class="node">
                     <p class="description">Questions? Email</p>
                     <p class="description note-highlight">
@@ -63,43 +67,81 @@
                     </p>
                 </section>
 
-                <!-- <div class="divider"></div> -->
+                <div class="divider"></div>
 
+                <!-- Cal App Embed Section -->
                 <section class="node embed-node">
-                    <iframe
-                        data-tally-src="https://tally.so/embed/QKErv7?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-                        loading="lazy"
-                        width="100%"
-                        height="542"
-                        frameborder="0"
-                        marginheight="0"
-                        marginwidth="0"
-                        title="Divination Request"></iframe>
-                    <script is:inline>
-                        var d = document,
-                            w = "https://tally.so/widgets/embed.js",
-                            v = function () {
-                                "undefined" != typeof Tally
-                                    ? Tally.loadEmbeds()
-                                    : d
-                                          .querySelectorAll(
-                                              "iframe[data-tally-src]:not([src])",
-                                          )
-                                          .forEach(function (e) {
-                                              e.src = e.dataset.tallySrc;
-                                          });
+                    <!-- Cal inline embed code begins -->
+                    <div
+                        style="width:100%;height:100%;overflow:scroll"
+                        id="my-cal-inline-vedic-astrology-reading"
+                    >
+                    </div>
+                    <script type="text/javascript" is:inline>
+                        (function (C, A, L) {
+                            let p = function (a, ar) {
+                                a.q.push(ar);
                             };
-                        if ("undefined" != typeof Tally) v();
-                        else if (
-                            d.querySelector('script[src="' + w + '"]') == null
-                        ) {
-                            var s = d.createElement("script");
-                            ((s.src = w),
-                                (s.onload = v),
-                                (s.onerror = v),
-                                d.body.appendChild(s));
-                        }
+                            let d = C.document;
+                            C.Cal =
+                                C.Cal ||
+                                function () {
+                                    let cal = C.Cal;
+                                    let ar = arguments;
+                                    if (!cal.loaded) {
+                                        cal.ns = {};
+                                        cal.q = cal.q || [];
+                                        d.head.appendChild(
+                                            d.createElement("script"),
+                                        ).src = A;
+                                        cal.loaded = true;
+                                    }
+                                    if (ar[0] === L) {
+                                        const api = function () {
+                                            p(api, arguments);
+                                        };
+                                        const namespace = ar[1];
+                                        api.q = api.q || [];
+                                        if (typeof namespace === "string") {
+                                            cal.ns[namespace] =
+                                                cal.ns[namespace] || api;
+                                            p(cal.ns[namespace], ar);
+                                            p(cal, [
+                                                "initNamespace",
+                                                namespace,
+                                            ]);
+                                        } else p(cal, ar);
+                                        return;
+                                    }
+                                    p(cal, ar);
+                                };
+                        })(
+                            window,
+                            "https://app.cal.com/embed/embed.js",
+                            "init",
+                        );
+                        Cal("init", "vedic-astrology-reading", {
+                            origin: "https://app.cal.com",
+                        });
+                        Cal.config = Cal.config || {};
+                        Cal.config.forwardQueryParams = true;
+
+                        Cal.ns["vedic-astrology-reading"]("inline", {
+                            elementOrSelector:
+                                "#my-cal-inline-vedic-astrology-reading",
+                            config: {
+                                layout: "month_view",
+                                useSlotsViewOnSmallScreen: "true",
+                            },
+                            calLink: "fruitingcurrents/vedic-astrology-reading",
+                        });
+
+                        Cal.ns["vedic-astrology-reading"]("ui", {
+                            hideEventTypeDetails: false,
+                            layout: "month_view",
+                        });
                     </script>
+                    <!-- Cal inline embed code ends -->
                 </section>
             </main>
         </div>
@@ -232,9 +274,10 @@
         max-width: 360px;
     }
 
-    .description em {
-        font-style: italic;
-        color: #4a4540; /* Makes the highlighted examples slightly warmer/clearer */
+    /* Subtle typographic shift to soften the note's presence */
+    .note-highlight {
+        color: #786f64;
+        font-style: italic; /* This adds the italic styling */
     }
 
     .divider {
@@ -244,10 +287,10 @@
         margin: 0.5rem auto;
     }
 
-    /* Framing constraint to ensure Tally script compiles smoothly */
+    /* Framing constraint to ensure Cal script sets up cleanly */
     .embed-node {
         width: 100%;
-        min-height: 552px;
+        min-height: 600px;
         border-radius: 2px;
         overflow: hidden;
     }
